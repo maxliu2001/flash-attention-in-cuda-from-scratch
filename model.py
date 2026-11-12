@@ -16,7 +16,6 @@ __global__ void vector_add(const float* a, const float* b, float* c, int n) {
 
 # Step 2 - scale_array
 __global__ void scale_array(float* a, float scalar, int n) {
-    // TODO: multiply each element of a by scalar in place
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < n) {
         a[i] *= scalar;
